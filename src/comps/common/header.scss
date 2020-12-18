@@ -4,15 +4,17 @@
     //background-color: #282c34;
     //background-color: #191970;
     //background-color: darkslateblue;
-    min-height: 100vh;
+    //min-height: 100vh;
     display: flex;
     flex-direction: column;
     //font-size: calc(10px + 2vmin);
     //color: white;
-    .App-logo {
-      height: 40vmin;
-      pointer-events: none;
-    }
+  }
+  .App-logo {
+    display: flex;
+    flex-direction: column;
+    height: 40vmin;
+    pointer-events: none;
   }
 }
 

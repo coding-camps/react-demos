@@ -10,16 +10,6 @@ export default class Header extends React.Component {
     }
 
     render() {
-        const upStyle = {
-            height: 40,
-            width: 40,
-            lineHeight: '40px',
-            borderRadius: 4,
-            backgroundColor: '#1088e9',
-            color: '#fff',
-            textAlign: 'center',
-            fontSize: 14,
-        };
         return (
             <React.StrictMode>
                 <div className="App">
@@ -42,8 +32,8 @@ export default class Header extends React.Component {
                             <Link to="/app2">App2</Link>
                             <Link to="/app3">App3</Link>
                         </nav>
-                        {this.props.children}
                     </header>
+                    {this.props.children}
                     <BackTop>
                         <div style={upStyle}>UP</div>
                     </BackTop>
