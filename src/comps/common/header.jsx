@@ -1,6 +1,5 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import { BackTop } from 'antd';
 import "./header.scss";
 
 export default class Header extends React.Component {
@@ -34,9 +33,6 @@ export default class Header extends React.Component {
                         </nav>
                     </header>
                     {this.props.children}
-                    <BackTop>
-                        <div style={upStyle}>UP</div>
-                    </BackTop>
                 </div>
             </React.StrictMode>
         );

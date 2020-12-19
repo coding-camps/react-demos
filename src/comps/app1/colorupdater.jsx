@@ -1,8 +1,6 @@
 import React from "react";
-// import {lodash} from "lodash/seq";
 import _ from "lodash";
 
-import {Button} from "antd";
 
 export default class ColorUpdater extends React.Component {
     constructor(props) {
@@ -53,10 +51,10 @@ export default class ColorUpdater extends React.Component {
                 <h2 style={this.state.isRed ? redStyle : blueStyle}>Color Block</h2>
                 <h2 style={commonStyle}>{this.state.content}</h2>
                 <h2 style={commonStyle}>{this.state.now.toLocaleTimeString()}</h2>
-                <Button onClick={this.handleClick}>Change</Button>
-                <Button onClick={this.handleClickX}>X</Button>
-                <Button onClick={this.handleClickY}>Y</Button>
-                <Button onClick={this.handleDate}>Now</Button>
+                <button onClick={this.handleClick}>Change</button>
+                <button onClick={this.handleClickX}>X</button>
+                <button onClick={this.handleClickY}>Y</button>
+                <button onClick={this.handleDate}>Now</button>
             </>
         )
     }

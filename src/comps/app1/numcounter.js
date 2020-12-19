@@ -1,5 +1,4 @@
 import React from "react";
-import {Button} from "antd";
 import "./numcounter.scss"
 
 export default class Numcounter extends React.Component {
@@ -22,7 +21,7 @@ export default class Numcounter extends React.Component {
         return (
             <div className="num-updater">
                 <span>{this.state.num}</span>
-                <Button onClick={this.addNumx}>UpdaterX</Button>
+                <button onClick={this.addNumx}>UpdaterX</button>
             </div>
         );
     }

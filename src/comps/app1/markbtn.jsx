@@ -1,7 +1,4 @@
 import React from "react";
-import {Button} from "antd";
-// import ReactMarkdown from 'react-markdown';
-// import remarkGfm from "remark-gfm";
 import {marked} from "marked";
 
 class Markbtn extends React.Component {
@@ -27,14 +24,14 @@ class Markbtn extends React.Component {
     render() {
         return (
             <>
-                <Button
+                <button
                     onClick={this.handleClick}
                     style={{ width: "100px" }}
                 >
                     Click
-                </Button>
+                </button>
                 |
-                <Button onClick={this.handleCls} style={{width: "100px"}}>Clear</Button>
+                <button onClick={this.handleCls} style={{width: "100px"}}>Clear</button>
                 <div style={{display: "block"}} dangerouslySetInnerHTML={this.state.htmlView}>
                 </div>
             </>
