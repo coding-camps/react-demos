@@ -8,7 +8,7 @@ export default class Clock extends React.Component {
 
     componentDidMount() {
         this.clockId = setInterval(
-            ()=>this.trick(),
+            () => this.trick(),
             1000
         );
     }
@@ -24,11 +24,11 @@ export default class Clock extends React.Component {
     }
 
     render() {
-        let blockStyle = {width: "fit-content"};
+        let blockStyle = {};
         return (
             <div>
-                <h1 style={blockStyle}>Date: {this.state.time.toLocaleDateString()}</h1>
-                <h1 style={blockStyle}>Time: {this.state.time.toLocaleTimeString()}</h1>
+                <span style={blockStyle}>Date: {this.state.time.toLocaleDateString('yyyymmdd')}</span><br/>
+                <span style={blockStyle}>Time: {this.state.time.toLocaleTimeString()}</span>
             </div>
         );
     }

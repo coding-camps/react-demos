@@ -17,8 +17,9 @@ class Markbtn extends React.Component {
                 this.setState({htmlView: {__html: marked.parse(text)}});
             });
     }
-    handleCls (event) {
-        this.setState({htmlView: {__html:"loading..."}});
+
+    handleCls(event) {
+        this.setState({htmlView: {__html: "loading..."}});
     }
 
     render() {
@@ -26,7 +27,7 @@ class Markbtn extends React.Component {
             <>
                 <button
                     onClick={this.handleClick}
-                    style={{ width: "100px" }}
+                    style={{width: "100px"}}
                 >
                     Click
                 </button>

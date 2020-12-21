@@ -1,5 +1,4 @@
 import React from "react";
-import "./sayhello.scss";
 
 export default class Sayhello extends React.Component {
     static defaultProps = {
@@ -7,8 +6,12 @@ export default class Sayhello extends React.Component {
     }
 
     render() {
+        const style = {
+            margin: "10px",
+            display: "contents",
+        };
         return (
-            <span className="sayHello">
+            <span style={style} className="sayHello">
                 Hello {this.props.name}
             </span>
         );

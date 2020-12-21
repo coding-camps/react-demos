@@ -1,11 +1,11 @@
 import React from "react";
 import {Link, Outlet} from "react-router-dom";
-import Header from "../comps/common/header";
+import PageLayout from "../comps/common/pagelayout";
 import Testblock from "../comps/common/testblock";
 
 export default function App2() {
     return (
-        <Header titles={["App2","react router"]}>
+        <PageLayout titles={["App2", "react router"]}>
             <Testblock blockName={"router offical demo"}>
                 <nav>
                     <Link to="/app2">Home</Link> |
@@ -14,7 +14,6 @@ export default function App2() {
                 </nav>
                 <Outlet/>
             </Testblock>
-        </Header>
-
+        </PageLayout>
     );
 }

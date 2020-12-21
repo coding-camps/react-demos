@@ -1,9 +1,10 @@
 import React from "react";
-import Header from "../comps/common/header";
+import PageLayout from "../comps/common/pagelayout";
 
 export default function App3() {
     return (
-        <Header titles={["App3","react redux"]}>
-        </Header>
+        <PageLayout titles={["App3", "react redux"]}>
+            App3
+        </PageLayout>
     );
 }

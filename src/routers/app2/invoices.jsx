@@ -30,24 +30,24 @@ export default function Invoices() {
                 {invoices
                     .filter(invoice => {
                         let filter = searchParams.get("filter");
-                        if(!filter) return true;
+                        if (!filter) return true;
                         let name = invoice.name.toLowerCase();
                         return name.startsWith(filter.toLowerCase());
                     })
                     .map(invoice => (
-                    <Querynavlink
-                        style={({isActive}) => ({
-                                display: "block",
-                                margin: "1rem 0",
-                                color: isActive ? "yellowgreen" : ""
-                            }
-                        )}
-                        to={`${invoice.number}`}
-                        key={invoice.number}
-                    >
-                        {invoice.name}
-                    </Querynavlink>
-                ))}
+                        <Querynavlink
+                            style={({isActive}) => ({
+                                    display: "block",
+                                    margin: "1rem 0",
+                                    color: isActive ? "yellowgreen" : ""
+                                }
+                            )}
+                            to={`${invoice.number}`}
+                            key={invoice.number}
+                        >
+                            {invoice.name}
+                        </Querynavlink>
+                    ))}
             </nav>
             <Outlet/>
         </div>

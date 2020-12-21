@@ -1,5 +1,4 @@
 import React from "react";
-import "./numcounter.scss"
 
 export default class Numcounter extends React.Component {
     constructor(propsx) {
@@ -19,9 +18,13 @@ export default class Numcounter extends React.Component {
 
     render() {
         return (
-            <div className="num-updater">
-                <span>{this.state.num}</span>
-                <button onClick={this.addNumx}>UpdaterX</button>
+            <div className="num-updater" style={{margin: "1rem"}}>
+                <span style={{
+                    border: "dotted 1px yellowgreen",
+                    margin: "1rem",
+                    padding: "0.5rem",
+                }}>{this.state.num}</span>
+                <button style={{height: "3em"}} onClick={this.addNumx}>UpdaterX</button>
             </div>
         );
     }

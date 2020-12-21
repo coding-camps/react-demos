@@ -1,16 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter, Routes, Route} from "react-router-dom";
-import './index.scss';
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 import App from './pages/App';
 import App1 from "./pages/App1";
 import App2 from "./pages/App2";
 import App3 from "./pages/App3";
-import reportWebVitals from './reportWebVitals';
-
 import Invoices from "./routers/app2/invoices";
 import Expenses from "./routers/app2/expences";
 import Invoice from "./routers/app2/invoice";
+import reportWebVitals from './reportWebVitals';
+import './index.scss';
 
 ReactDOM.render(
     <BrowserRouter>
