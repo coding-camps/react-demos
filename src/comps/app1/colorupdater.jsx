@@ -13,9 +13,12 @@ export default class ColorUpdater extends React.Component {
 
     handleClick() {
         this.setState(
+            {isRed: !this.state.isRed}
+            /*
             (prevState, props) => (
                 {isRed: !prevState.isRed}
             )
+             */
         );
     }
 
@@ -42,20 +45,26 @@ export default class ColorUpdater extends React.Component {
     }
 
     render() {
-        let commonStyle = {width: "fit-content"};
+        let commonStyle = {margin: "1rem", padding: "0.1rem"};
         let redStyle = _.extend({backgroundColor: "red"}, commonStyle);
         let blueStyle = _.extend({backgroundColor: "blue"}, commonStyle);
+        let divStyle = {margin: "1rem"};
         return (
             <>
-                <h2 style={this.state.isRed ? redStyle : blueStyle}>Color Block</h2>
-                <h2 style={commonStyle}>{this.state.content}</h2>
-                <h2 style={commonStyle}>{this.state.now.toLocaleTimeString()}</h2>
-                <button onClick={this.handleClick}>Change</button>
-                <button onClick={this.handleClickX}>X</button>
-                <button onClick={this.handleClickY}>Y</button>
-                <button onClick={this.handleDate}>Now</button>
+                <div style={divStyle}>
+                    <button onClick={this.handleClick}>switch color</button>
+                    <span style={this.state.isRed ? redStyle : blueStyle}>Color Block</span>
+                </div>
+                <div style={divStyle}>
+                    <button onClick={this.handleClickX}>X</button>
+                    <button onClick={this.handleClickY}>Y</button>
+                    <span style={commonStyle}>{this.state.content}</span>
+                </div>
+                <div style={divStyle}>
+                    <button onClick={this.handleDate}>Now</button>
+                    <span style={commonStyle}>{this.state.now.toLocaleTimeString()}</span>
+                </div>
             </>
         )
     }
-
 }
