@@ -6,6 +6,7 @@ import ColorUpdater from "../comps/app1/colorupdater";
 import Clock from "../comps/app1/clock";
 import Numcounter from "../comps/app1/numcounter";
 import Markbtn from "../comps/app1/markbtn";
+import {Comm1PC} from "../comps/app1/comm1PC";
 
 function App1() {
     return (
@@ -32,6 +33,10 @@ function App1() {
 
             <Testblock blockName={"markdown: fetch, props"}>
                 <Markbtn/>
+            </Testblock>
+
+            <Testblock blockName={"communication: parent -> child : (by class)"}>
+                <Comm1PC/>
             </Testblock>
         </PageLayout>
     );
