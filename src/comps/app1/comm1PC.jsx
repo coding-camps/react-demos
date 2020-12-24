@@ -1,50 +1,40 @@
 import {Component} from "react";
 
 class Comm1Child1Clz extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
-
     render() {
         return (
             <div>
-                <span>
-                    ChildA => {this.props.msg}
-                </span>
+                Child1 =>
+                [{this.props.child1Msg1}],
+                [{this.props.child1Msg2}],
             </div>
         );
     }
+}
+
+function Comm1Child2Fun(props) {
+    const {child2Msg1, child2Msg2} = props;
+    return (
+        <div>
+            Child2 =>
+            [{child2Msg1}],
+            [{child2Msg2}],
+        </div>
+    );
 }
 
 class Comm1Parent1FClz extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
-
-    refreshChild() {
-        return (e) => {
-            this.setState({
-                childMsg: "father->sun ok",
-            })
-        };
-    }
-
     render() {
         return (
             <div>
-                Parent=>
-                <button onClick={this.refreshChild}>
-                    Parant->Child
-                </button>
-                <Comm1Child1Clz msg={this.state.childMsg || "original child msg"}/>
+                <Comm1Child1Clz child1Msg1={"parent1-MSG-1"} child1Msg2={"parent1-MSG-2"}/>
+                <Comm1Child2Fun child2Msg1={"parent1-MSG-3"} child2Msg2={"parent1-MSG-4"}/>
             </div>
         );
     }
 }
 
-export class Comm1PC extends Component {
+export default class Comm1PC extends Component {
     render() {
         return (<Comm1Parent1FClz/>);
     }
