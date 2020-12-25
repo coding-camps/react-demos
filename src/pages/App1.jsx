@@ -7,6 +7,7 @@ import Clock from "../comps/app1/clock";
 import Numcounter from "../comps/app1/numcounter";
 import Markbtn from "../comps/app1/markbtn";
 import Comm1PC from "../comps/app1/comm1PC";
+import Comm2CP from "../comps/app1/comm2CP";
 
 function App1() {
     return (
@@ -37,6 +38,10 @@ function App1() {
 
             <Testblock blockName={"communication: parent -> child: (by class and function)"}>
                 <Comm1PC/>
+            </Testblock>
+
+            <Testblock blockName={"communication: child -> parent: (by class and function)"}>
+                <Comm2CP/>
             </Testblock>
         </PageLayout>
     );
