@@ -23,7 +23,9 @@ export default class Numcounter extends React.Component {
                     border: "dotted 1px yellowgreen",
                     margin: "1rem",
                     padding: "0.5rem",
-                }}>{this.state.num}</span>
+                }}>
+                    {this.state.num}
+                </span>
                 <button style={{height: "3em"}} onClick={this.addNumx}>UpdaterX</button>
             </div>
         );
