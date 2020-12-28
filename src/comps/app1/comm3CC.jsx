@@ -70,7 +70,7 @@ class Comm3Parent1C extends Component {
     }
 }
 
-function Comm3Parent2F(props) {
+function Comm3Parent2F() {
     const [msg, setMsg] = useState(null);
     const getChildMsg = (childMsg) => {
         setMsg(childMsg);
@@ -111,7 +111,6 @@ export default class Comm3CC extends Component {
             <div>
                 <Comm3Parent1C/>
                 <Comm3Parent2F/>
-                <input type="text"/>
             </div>
         );
     }
