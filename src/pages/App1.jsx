@@ -9,6 +9,9 @@ import Markbtn from "../comps/app1/markbtn";
 import Comm1PC from "../comps/app1/comm1PC";
 import Comm2CP from "../comps/app1/comm2CP";
 import Comm3CC from "../comps/app1/comm3CC";
+import Commx from "../comps/app1/commx";
+import Commy from "../comps/app1/commy";
+import Commz from "../comps/app1/commz";
 
 function App1() {
     return (
@@ -38,7 +41,12 @@ function App1() {
             </Testblock>
 
             <Testblock blockName={"communication: parent -> child: (by class and function)"}>
-                <Comm1PC/>
+                <Testblock blockName={"communication: parent -> child"}>
+                    <Comm1PC/>
+                </Testblock>
+                <Testblock blockName={"communication: 父更新子"}>
+                    <Commx/>
+                </Testblock>
             </Testblock>
 
             <Testblock blockName={"communication: child -> parent: (by class and function)"}>
@@ -47,6 +55,13 @@ function App1() {
 
             <Testblock blockName={"communication: child1 -> child2, child3: (by class and function)"}>
                 <Comm3CC/>
+            </Testblock>
+
+            <Testblock blockName={"communication: 子更新父"}>
+                <Commy/>
+            </Testblock>
+            <Testblock blockName={"communication: 兄弟间通信"}>
+                <Commz/>
             </Testblock>
         </PageLayout>
     );
