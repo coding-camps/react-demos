@@ -12,6 +12,7 @@ import Comm3CC from "../comps/app1/comm3CC";
 import Commx from "../comps/app1/commx";
 import Commy from "../comps/app1/commy";
 import Commz from "../comps/app1/commz";
+import LifecycleC1 from "../comps/app1/lefecycleC1";
 
 function App1() {
     return (
@@ -62,6 +63,10 @@ function App1() {
             </Testblock>
             <Testblock blockName={"communication: 兄弟间通信"}>
                 <Commz/>
+            </Testblock>
+
+            <Testblock blockName={"Lifecycle 1"}>
+                <LifecycleC1/>
             </Testblock>
         </PageLayout>
     );
