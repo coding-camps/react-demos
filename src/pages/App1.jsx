@@ -12,7 +12,7 @@ import Comm3CC from "../comps/app1/comm3CC";
 import Commx from "../comps/app1/commx";
 import Commy from "../comps/app1/commy";
 import Commz from "../comps/app1/commz";
-import LifecycleC1 from "../comps/app1/lefecycleC1";
+import LifecycleC1 from "../comps/app1/lifecycleC1";
 
 function App1() {
     return (
