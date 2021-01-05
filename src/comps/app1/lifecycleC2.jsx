@@ -4,38 +4,30 @@ import {Component} from "react";
 class Son extends Component {
     constructor(props) {
         super(props);
-        // this.state = {};
-        console.log("constructor()");
-    }
-
-    componentWillMount() {
-        console.log("componentWillMount()");
-    }
-
-    componentWillReceiveProps(nextProps, nextContext) {
-        console.log("componentWillReceiveProps(nextProps, nextCtx)");
+        console.log("2 constructor()");
     }
 
     shouldComponentUpdate(nextProps, nextState, nextContext) {
-        console.log("shouldComponentUpdate(nextProps, nextState, nextCtx)");
+        console.log("2 shouldComponentUpdate(nextProps, nextState, nextCtx)");
+        console.log("\t", {params: {nextProps, nextState, nextContext}});
         return true;
     }
 
-    componentWillUpdate(nextProps, nextState, nextContext) {
-        console.log("componentWillUpdate(nextProps, nextState, nextCtx");
-    }
-
     render() {
-        console.log("render()");
+        console.log("2 render()");
         return (<div>{this.props.name}</div>);
     }
 
-    componentDidMount() {
-        console.log("componentDidMount()");
+    getSnapshotBeforeUpdate(prevProps, prevState) {
+        console.log("2 getSnapshotBeforeUpdate(prevProps, prevState)");
+        let result = {prevProps, prevState, label: "returned from getSnapshotBeforeUpdate() method."};
+        console.log("\t", result);
+        return result;
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-        console.log("componentDidUpdate(prevProps, prevState, snapshot)");
+        console.log("2 componentDidUpdate(prevProps, prevState, snapshot)");
+        console.log("\t", {prevProps, prevState, snapshot})
     }
 
 }
