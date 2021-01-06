@@ -1,76 +1,45 @@
-import React, {Component} from "react";
-import ReactDOM from "react-dom";
+import {Component} from "react";
 
 class Son extends Component {
     constructor(props) {
         super(props);
-        console.log("constructor()");
-    }
-
-    componentWillMount() {
-        console.log("componentWillMount()");
-    }
-
-    componentWillReceiveProps(nextProps, nextContext) {
-        console.log("componentWillReceiveProps(nextProps, nextContext)")
-    }
-
-    shouldComponentUpdate(nextProps, nextState, nextContext) {
-        console.log("shouldComponentUpdate(nextProps, nextState, nextContext)");
-        return true;
-    }
-
-    componentWillUpdate(nextProps, nextState, nextContext) {
-        console.log("componentWillUpdate(nextProps, nextState, nextContext)");
-    }
-
-    delComponent() {
-
-        ReactDOM.unmountComponentAtNode(document.getElementById("lifecycle3"));
+        console.log("3 constructor(props)");
     }
 
     render() {
-        console.log("render()");
-        return (
-            <div>
-                <div id={"lifecycle3"}>{this.props.name}</div>
-                <button onClick={this.delComponent}>卸载组件</button>
-            </div>
-        );
-    }
-
-    componentDidMount() {
-        console.log("componentDidMount()");
-    }
-
-    componentDidUpdate(prevProps, prevState, snapshot) {
-        console.log("componentDidUpdate(prevProps, prevState, snapshot)");
+        console.log("3 render()");
+        return (<div>观察的组件：{this.props.name}</div>);
     }
 
     componentWillUnmount() {
-        console.log("componentWillUnmount()");
+        console.log("3 componentWillUnmount()");
     }
 }
 
 class Father extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            name: "React"
-        }
+        this.state = {name: "React", isShow: true};
         this.updateChildProps = this.updateChildProps.bind(this);
     }
 
     updateChildProps() {
-        this.setState({name: "Vue"});
+        this.setState({name: this.state.name === "React" ? "Vue" : "React"});
+    }
+
+    delComponent() {
+        this.setState({isShow: !this.state.isShow});
     }
 
     render() {
-        console.log("render()");
         return (
             <div>
-                <Son name={this.state.name}/>
+                <div>{this.state.isShow
+                    ? <Son name={this.state.name}/>
+                    : <div>组件已被卸载</div>
+                }</div>
                 <button onClick={this.updateChildProps}>更新子组件</button>
+                <button onClick={this.delComponent.bind(this)}>{this.state.isShow ? "卸载" : "加载"}子组件</button>
             </div>
         );
     }
