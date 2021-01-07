@@ -4,30 +4,30 @@ import {Component} from "react";
 class Son extends Component {
     constructor(props) {
         super(props);
-        console.log("2 constructor()");
+        console.log("updating-2 constructor()");
     }
 
     shouldComponentUpdate(nextProps, nextState, nextContext) {
-        console.log("2 shouldComponentUpdate(nextProps, nextState, nextCtx)");
-        console.log("\t", {params: {nextProps, nextState, nextContext}});
+        console.log("updating-2 shouldComponentUpdate(nextProps, nextState, nextCtx)");
+        console.log("\t", {nextProps, nextState, nextContext});
         return true;
     }
 
     render() {
-        console.log("2 render()");
-        return (<div>{this.props.name}</div>);
+        console.log("updating-2 render()");
+        return (<div>观察的组件：{this.props.name}</div>);
     }
 
     getSnapshotBeforeUpdate(prevProps, prevState) {
-        console.log("2 getSnapshotBeforeUpdate(prevProps, prevState)");
+        console.log("updating-2 getSnapshotBeforeUpdate(prevProps, prevState)");
         let result = {prevProps, prevState, label: "returned from getSnapshotBeforeUpdate() method."};
         console.log("\t", result);
         return result;
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-        console.log("2 componentDidUpdate(prevProps, prevState, snapshot)");
-        console.log("\t", {prevProps, prevState, snapshot})
+        console.log("updating-2 componentDidUpdate(prevProps, prevState, snapshot)");
+        console.log("\t", {prevProps, prevState, snapshot});
     }
 
 }
@@ -36,13 +36,11 @@ class Father extends Component {
     constructor(props) {
         super(props);
         this.updateChildProps = this.updateChildProps.bind(this);
-        this.state = {
-            name: "React"
-        };
+        this.state = {name: "React"};
     }
 
     updateChildProps() {
-        this.setState({name: "Vue"});
+        this.setState({name: this.state.name === "React" ? "Vue" : "React"});
     }
 
     render() {
@@ -58,9 +56,5 @@ class Father extends Component {
 
 
 export default function LifecycleC2() {
-    return (
-        <div>
-            <Father/>
-        </div>
-    );
+    return (<div><Father/></div>);
 }

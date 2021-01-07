@@ -24,7 +24,7 @@ function App1() {
             </Testblock>
 
             <Testblock blockName={"state"}>
-                <ColorUpdater></ColorUpdater>
+                <ColorUpdater/>
             </Testblock>
 
             <Testblock blockName={"component life"}>
@@ -67,13 +67,13 @@ function App1() {
                 <Commz/>
             </Testblock>
 
-            <Testblock blockName={"Lifecycle 1"}>
+            <Testblock blockName={"Lifecycle demo 1: 挂载 mounting"}>
                 <LifecycleC1/>
             </Testblock>
-            <Testblock blockName={"Lifecycle 2"}>
+            <Testblock blockName={"Lifecycle demo 2: 更新 updating"}>
                 <LifecycleC2/>
             </Testblock>
-            <Testblock blockName={"Lifecycle 3"}>
+            <Testblock blockName={"Lifecycle demo 3: 卸载 unmounting"}>
                 <LifecycleC3/>
             </Testblock>
         </PageLayout>

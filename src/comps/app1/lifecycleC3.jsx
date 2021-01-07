@@ -3,16 +3,16 @@ import {Component} from "react";
 class Son extends Component {
     constructor(props) {
         super(props);
-        console.log("3 constructor(props)");
+        console.log("unmounting-3 constructor(props)");
     }
 
     render() {
-        console.log("3 render()");
+        console.log("unmounting-3 render()");
         return (<div>观察的组件：{this.props.name}</div>);
     }
 
     componentWillUnmount() {
-        console.log("3 componentWillUnmount()");
+        console.log("unmounting-3 componentWillUnmount()");
     }
 }
 
@@ -46,9 +46,5 @@ class Father extends Component {
 }
 
 export default function LifecycleC3() {
-    return (
-        <div>
-            <Father/>
-        </div>
-    );
+    return (<div><Father/></div>);
 }
