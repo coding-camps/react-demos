@@ -10,7 +10,6 @@ export default class Testblock extends React.Component {
         return (
             <blockquote className="demo-block">
                 <h3 className="demo-title">{this.props.blockName}</h3>
-                <hr className="demo-line"/>
                 <div className="demo-body">
                     {this.props.children}
                 </div>
