@@ -15,6 +15,7 @@ import Commz from "../comps/app1/commz";
 import LifecycleC1 from "../comps/app1/lifecycleC1";
 import LifecycleC2 from "../comps/app1/lifecycleC2";
 import LifecycleC3 from "../comps/app1/lifecycleC3";
+import LifeCycleFull from "../comps/app1/lifecycleFull";
 
 function App1() {
     return (
@@ -75,6 +76,9 @@ function App1() {
             </Testblock>
             <Testblock blockName={"Lifecycle demo 3: 卸载 unmounting"}>
                 <LifecycleC3/>
+            </Testblock>
+            <Testblock blockName={"Full life cycle demo"}>
+                <LifeCycleFull/>
             </Testblock>
         </PageLayout>
     );
