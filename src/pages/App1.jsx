@@ -17,6 +17,7 @@ import LifecycleC2 from "../comps/app1/lifecycleC2";
 import LifecycleC3 from "../comps/app1/lifecycleC3";
 import LifeCycleFull from "../comps/app1/lifecycleFull";
 import NumCounter2 from "../comps/app1/numcounter2";
+import Login from "../comps/app1/login";
 
 function App1() {
     return (
@@ -84,6 +85,10 @@ function App1() {
 
             <Testblock blockName={"explore function setState()"}>
                 <NumCounter2 />
+            </Testblock>
+
+            <Testblock blockName={"ref demo1"}>
+                <Login/>
             </Testblock>
         </PageLayout>
     );
