@@ -23,7 +23,7 @@ export default class Login extends React.Component {
 
     componentDidMount() {
         // 获取焦点
-        this.focusUser();
+        // this.focusUser();
     }
 
     login() {
