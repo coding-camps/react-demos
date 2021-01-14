@@ -1,7 +1,7 @@
 import React from "react";
 import PageLayout from "../comps/common/pagelayout";
 import Testblock from "../comps/common/testblock";
-import Sayhello from "../comps/app1/sayhello";
+import DemoProps from "../comps/app1/sayhello";
 import ColorUpdater from "../comps/app1/colorupdater";
 import Clock from "../comps/app1/clock";
 import Numcounter from "../comps/app1/numcounter";
@@ -23,7 +23,7 @@ function App1() {
     return (
         <PageLayout titles={["App1", "understand basic conceptions"]}>
             <Testblock blockName="props">
-                <Sayhello name={"React"}/> | <Sayhello/>
+                <DemoProps/>
             </Testblock>
 
             <Testblock blockName={"state"}>
