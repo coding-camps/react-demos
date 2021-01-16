@@ -11,7 +11,7 @@ class Markbtn extends React.Component {
     }
 
     handleClick(event) {
-        fetch(`/hello.md`)
+        fetch(`/api/app1/markdown-text.md`)
             .then((resp) => resp.text())
             .then((text) => {
                 this.setState({htmlView: {__html: marked.parse(text)}});
