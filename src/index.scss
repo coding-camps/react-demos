@@ -92,13 +92,12 @@ code {
 
 // common
 table {
-  border-style: solid;
-  border-color: greenyellow;
+  border-collapse: collapse;
 
   tr {
     th, td {
       border-style: solid;
-      border-color: greenyellow;
+      border-color: blue;
     }
   }
 }
