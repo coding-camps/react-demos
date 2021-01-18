@@ -1,7 +1,9 @@
-import React from "react";
 import {marked} from "marked";
+import {Component} from "react";
+import Bus from "../../utils/eventBus";
 
-class Markbtn extends React.Component {
+
+class Markbtn extends Component {
 
     constructor(props) {
         super(props);
@@ -20,6 +22,10 @@ class Markbtn extends React.Component {
 
     handleCls(event) {
         this.setState({htmlView: {__html: "loading..."}});
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        Bus.emit("load", "hello");
     }
 
     render() {
