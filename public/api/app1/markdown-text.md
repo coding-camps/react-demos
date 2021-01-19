@@ -22,6 +22,8 @@ block: $$e=m^2$$
 
 ### code block(java)
 ```java
+// inline: $e=mc^2$  
+// block: $$e=m^2$$
 public class Hello {
     public static void main(String[] args) {
         System.out.println("Hello world!");
