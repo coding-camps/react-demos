@@ -5,6 +5,9 @@
   "license": "MIT",
   "homepage": ".",
   "scripts": {
+    "dev": "vite",
+    "buildx": "vite build",
+    "preview": "vite preview",
     "clean": "rm -rf $(pwd)/build",
     "start": "cross-env PORT=3806 react-scripts start",
     "start.win": "set PORT=3806 && react-scripts start",
@@ -30,9 +33,14 @@
     "react-redux": "^8.0.1",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
+    "react-thunk": "^1.0.0",
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react": "^1.3.0",
+    "vite": "^2.9.9",
     "cross-env": "^7.0.3",
     "sass": "^1.52.1"
   },
