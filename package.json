@@ -5,7 +5,7 @@
   "license": "MIT",
   "homepage": ".",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --open",
     "buildx": "vite build",
     "preview": "vite preview",
     "clean": "rm -rf $(pwd)/build",
@@ -40,9 +40,9 @@
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@vitejs/plugin-react": "^1.3.0",
-    "vite": "^2.9.9",
     "cross-env": "^7.0.3",
-    "sass": "^1.52.1"
+    "sass": "^1.52.1",
+    "vite": "^2.9.9"
   },
   "eslintConfig": {
     "extends": [
@@ -61,5 +61,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "index.js",
+  "repository": "git@github.com:coding-camps/react-demo1.git",
+  "author": "JacobCN <coder211@163.com>"
 }
